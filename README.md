@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## ✌️ TL;DR
+
+You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [ArmashXD](https://github.com/ArmashXD). Stars on this repo are appreciated. Thanks !
 
 ## Getting Started
 
+Next-folio is a portfolio template built using the Next.js framework. It is designed to be an easy-to-use and customizable template for developers who want to create their own portfolio websites. The template includes several key features, such as a responsive layout, dark and light modes, and animations for a more engaging user experience. It also includes pre-built sections for showcasing a developer's skills, projects, and experiences, as well as an "About Me" section and a contact form
+
+## ✨ Built with
+
+This project was built using these technologies.
+
+- Next.js
+- React.js
+- Tailwind
+- Framer Motion
+- DaisyUI
+- Typescript
+- Vercel
+
+## 🛠️ Installation and Setup Instructions
+
 First, run the development server:
+```bash
+git clone https://github.com/ArmashXD/next-folio.git
+cd next-folio
+```
 
 ```bash
+npm install
 npm run dev
 # or
+yarn 
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can view a live demo of the template at [https://syed-armash-hussain.vercel.app/](https://syed-armash-hussain.vercel.app/).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 🔧 Usage 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- There is also a **config.js** file in the root directory of the project which contains configuration options for the template. You can customize it however you want to fit your needs.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- The **components directory** contains reusable components that are used throughout the template, such as the Button, Header, Layout, ProjectCard, and SkillCard components. These components can be customized or replaced as needed to fit your own design requirements.
 
-## Learn More
+- The **pages directory** contains the pages of the website, such as the index.js page for the home page, the about.js page for the "About Me" section, the contact.js page for the contact form, and the projects.js page for the projects section. You can add or remove pages as needed, or modify the existing pages to fit your own content.
 
-To learn more about Next.js, take a look at the following resources:
+- The **public directory** contains static assets, such as images and fonts, that are used throughout the template. You can add your own images or fonts to this directory and reference them in your components or pages.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- The **styles directory** contains the global styles for the template, as well as specific styles for individual components. The globals.css file contains the global styles, while the index.module.css file contains the styles for the index.js page. You can modify these styles or add your own styles to fit your own design requirements.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- The **utils directory** contains utility functions that are used throughout the template, such as the formatDate function for formatting dates and the sendEmail function for sending emails from the contact form. You can modify or add your own utility functions as needed.
