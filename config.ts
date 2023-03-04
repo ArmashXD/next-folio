@@ -72,7 +72,7 @@ const PROJECTS = [
     title: "Calendax",
     description: `Manage your appointments, events and much more using calendax.`,
     link: "https://calendax.daxclients.com/",
-    img: "/assets/images/Calendax.png",
+    img: "/assets/images/Calendax.PNG",
     skills: [
       {
         title: "Html/CSS JavaScript",
