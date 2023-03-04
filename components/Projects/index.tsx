@@ -16,7 +16,7 @@ return (
           animate="enter"
           exit="exit"
           transition={{ type: "linear", duration: 1.5 }}
-          className="mb-4 xl:text-4xl md:text-2xl lg:text-xl font-extrabold tracking-tight leading-none "
+          className="mb-4 xl:text-4xl md:text-2xl lg:text-2xl sm:text-xl font-extrabold tracking-tight leading-none "
         >
           <span className="underline underline-offset-3 decoration-8 decoration-primary dark:decoration-secondary">
             Projects{" "}

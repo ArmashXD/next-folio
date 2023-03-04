@@ -9,7 +9,7 @@ const Skills = dynamic(() => import("../Skills"));
 
 function About() {
   return (
-    <div className="bg-base-200 min-h-screen py-20 p-20 lg:visible ">
+    <div className="bg-base-200 min-h-screen py-10 p-12 lg:visible ">
       <div>
         <motion.h1
           variants={AboutPageVariants.heading}
@@ -17,7 +17,7 @@ function About() {
           animate="enter"
           exit="exit"
           transition={{ type: "linear", duration: 1.5 }}
-          className="xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl font-bold text-left mt-4 "
+          className="xl:text-4xl md:text-2xl lg:text-2xl sm:text-xl font-bold text-left mt-4 "
         >
           <span className="underline underline-offset-3 decoration-8 decoration-primary dark:decoration-secondary">
             {PROFILE_INFO.about.title}
@@ -40,11 +40,10 @@ function About() {
               className=""
               variants={AboutPageVariants.paragraph}
               initial="hidden"
-              animate="enter"
               exit="exit"
               transition={{ type: "linear", duration: 1 }}
             >
-              <h1 className="xl:text-6xl lg:text-5xl md:text-4xl sm:text-2xl font-bold text-left mt-4  underline underline-offset-3 decoration-8 decoration-primary dark:decoration-secondary">
+              <h1 className="xl:text-4xl md:text-2xl lg:text-2xl sm:text-xl font-bold text-left mt-4  underline underline-offset-3 decoration-8 decoration-primary dark:decoration-secondary">
                 {PROFILE_INFO.about.work_experience_title}
               </h1>
             </motion.div>
@@ -59,7 +58,7 @@ function About() {
               exit="exit"
               transition={{ type: "linear", duration: 1 }}
             >
-              <h1 className="xl:text-6xl lg:text-5xl md:text-4xl font-bold text-left mt-4 sm:text-2xl underline underline-offset-3 decoration-8 decoration-primary dark:decoration-secondary">
+              <h1 className="xl:text-4xl md:text-2xl lg:text-2xl sm:text-xl font-bold text-left mt-4 underline underline-offset-3 decoration-8 decoration-primary dark:decoration-secondary">
                 {PROFILE_INFO.about.skills_title}
               </h1>
             </motion.div>
