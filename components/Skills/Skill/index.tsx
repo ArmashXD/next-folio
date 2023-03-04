@@ -25,7 +25,7 @@ function SkillItem({ item }: Props) {
       exit="exit"
       className="indicator hover:top-[-10px] transition top ease-in duration-800 "
     >
-      <span className="indicator-item badge badge-secondary rounded-xl w-fit">
+      <span className="indicator-item badge badge-secondary rounded-xl w-fit sm:text-xs">
         {item.title}
       </span>
       <div

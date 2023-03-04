@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { motion } from "framer-motion";
 import { ReposVariants } from "utils/animations";
 
@@ -7,6 +7,25 @@ interface Props {
 }
 
 function Repos({ repos }: Props) {
+  const sortedRepos = useCallback(() => {
+    const withDescription = repos.filter(
+      (item: any) => item?.description !== null
+    );
+    const withOutDescription = repos.filter(
+      (item: any) => item?.description === null
+    );
+
+    withDescription.sort((a: any, b: any) => {
+      if (a?.description === null || b.description === null) {
+        return 0;
+      }
+
+      return a.description.localeCompare(b.description);
+    });
+
+    return withDescription.concat(withOutDescription);
+  }, [repos]);
+
   return (
     <div className="py-5">
       <div className="ml-10">
@@ -16,7 +35,7 @@ function Repos({ repos }: Props) {
           animate="enter"
           exit="exit"
           transition={{ type: "linear", duration: 3 }}
-          className="mb-4 xl:text-4xl md:text-2xl lg:text-xl font-extrabold tracking-tight leading-none"
+          className="mb-4 xl:text-4xl md:text-2xl lg:text-2xl sm:text-xl font-extrabold tracking-tight leading-none"
         >
           <span></span>
           Github{" "}
@@ -31,39 +50,34 @@ function Repos({ repos }: Props) {
         animate="enter"
         exit="exit"
         transition={{ type: "linear", duration: 3 }}
-        className="overflow-x-auto w-[96%] justify-center ml-auto mr-auto "
+        className="p-10 grid grid-cols-2 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-5"
       >
-        <table className="table w-full">
-          <thead>
-            <tr>
-      
-              <th>Repository</th>
-              <th>Total Number of commits</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {repos?.map(
-              (item: any, key: number) =>
-                item.fork !== true && (
-                  <tr key={item.id}>
-                    <td className="uppercase">{item.name}</td>
-                    <td>{item.description || "-"}</td>
-                    <td>
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        className="badge badge-success rounded font-bold uppercase cursor-pointer"
-                        href={item.html_url}
-                      >
-                        Checkout Code
-                      </a>
-                    </td>
-                  </tr>
-                )
-            )}
-          </tbody>
-        </table>
+        {sortedRepos()?.map(
+          (item: any, key: number) =>
+            item.fork !== true && (
+              <div
+                key={key}
+                className="max-w-sm sm:max-w-lg p-6 border border-gray-200 rounded-lg shadow-xl bg-base-100  hover:top-[-10px] transition top ease-in duration-400"
+              >
+                <a href="#">
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight ">
+                    {item?.name?.toUpperCase() || "-"}
+                  </h5>
+                </a>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  {item?.description || "-"}
+                </p>
+                <a
+                  rel="noreferrer"
+                  href={item.html_url || "#"}
+                  target="_blank"
+                  className="btn btn-primary"
+                >
+                  CHECKOUT CODE
+                </a>
+              </div>
+            )
+        )}
       </motion.div>
     </div>
   );

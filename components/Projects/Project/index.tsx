@@ -42,10 +42,10 @@ function Project({ item }: Props) {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title xl:text-4xl lg:text-2xl md:text-lg sm:text-md font-bold underline underline-offset-3 decoration-8 decoration-primary dark:decoration-secondary">
+          <h2 className="card-title text-xl font-bold underline underline-offset-3 decoration-8 decoration-primary dark:decoration-secondary">
             {item.title}
           </h2>
-          <p className="xl:text-2xl lg:text-xl md:text-lg sm:text-md ">
+          <p className="text-lg">
             {item.description}
           </p>
 
