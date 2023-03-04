@@ -17,10 +17,15 @@ const navItems = [
 ];
 
 function NavList({ className }: { className: string }) {
+  const handleClick = () => {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement?.blur();
+    }
+  };
   return (
     <ul tabIndex={0} className={className}>
       {navItems?.map((item, key) => (
-        <NavItem key={key + 1} item={item} />
+        <NavItem key={key + 1} item={item} handleClick={handleClick} />
       ))}
     </ul>
   );

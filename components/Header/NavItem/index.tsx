@@ -6,16 +6,18 @@ interface Props {
   item?: {
     path: string;
     name: string;
-  };
+  },
+  handleClick: Function
 }
 
-function NavItem({ item }: Props) {
+function NavItem({ item, handleClick }: Props) {
   const router = useRouter();
   return (
     <li>
       <Link
         href={item!.path}
         className={`${item?.path === router.asPath ? "active rounded" : ""}`}
+        onClick={() => handleClick()}
       >
         {item!.name}
       </Link>
