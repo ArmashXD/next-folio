@@ -1,22 +1,20 @@
-const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || "Armash Portfolio";
+const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || "Mateenius Portfolio";
 
 /**
  * Basic Profile information you can change it to fit your needs.
  */
 const PROFILE_INFO = {
-  full_name: "Syed Armash Hussain",
+  full_name: "Abdul mateen",
   occupation: "Software Engineer",
-  nickname: "Armash XD",
+  nickname: "Mateenius",
   about: {
     title: "About Me ",
-    description: `I am a software engineer with over 2.5 years of experience in the industry. 
-    My main areas of expertise are Laravel, React, Vue, and front-end web development with HTML, CSS, and JavaScript. 
-    I have a strong foundation in computer science principles and enjoy using my skills to build intuitive and efficient web applications. 
-    I am passionate about staying up to date with the latest technologies and constantly improving my skillset. In my current role, 
-    I have had the opportunity to work on a variety of projects, from small business websites to large-scale web applications. 
-    I am a team player and enjoy collaborating with others to find creative solutions to complex problems.
-     I am always looking for ways to make a positive impact through my 
-     work and am excited to see what the future holds in this exciting field.`,
+    description: `
+    As a seasoned JavaScript developer, I have a deep understanding of the language and a broad experience working with its various environments, libraries, and frameworks. Whether it's developing front-end applications, building back-end systems, or integrating with APIs, I have a proven track record of delivering high-quality, scalable, and efficient solutions. I am passionate about coding and always strive to stay up-to-date with the latest technologies and best practices. My goal is to continue growing as a developer and make a positive impact in the tech community.
+    
+    I AM 🙋🏽 HERE TO HELP.
+    
+    Thankyou 🙏🏽🙏🏽!`,
     skills_title: "Tech Stack",
     certificate_title: "Certificates",
     work_experience_title: "Experience",
@@ -27,8 +25,8 @@ const PROFILE_INFO = {
  * Main page greeting text
  */
 const GREETING = {
-  title: "Hello, there folks !",
-  description: `My name is ${PROFILE_INFO.full_name} and I'm a ${PROFILE_INFO.occupation} through Research And Development`,
+  title: "Hi !",
+  description: `My name is ${PROFILE_INFO.full_name} and I'm a ${PROFILE_INFO.occupation}`,
   buttonText: "Know More About Me !",
   onButtonHoverText: "Know More About Me !",
 };
@@ -38,63 +36,6 @@ const GREETING = {
  * Projects that you have worked on
  */
 const PROJECTS = [
-  {
-    title: "Healthcare talent link",
-    description: `HealthcareTalentLink (HCTL) is a thriving platform driven by the ambition to link the diverse healthcare community and its talent. The digital platform focuses diligently on connecting all products, services, professionals, opportunities, and engagements within the healthcare realm`,
-    link: "https://uat.healthcaretalentlink.com/about",
-    img: "/assets/images/hctl.png",
-    skills: [
-      {
-        title: "Html/CSS JavaScript",
-      },
-      {
-        title: "Laravel",
-      },
-      {
-        title: "React",
-      },
-      {
-        title: "Next.js",
-      },
-      {
-        title: "Tailwind",
-      },
-      {
-        title: "MySQL",
-      },
-    ],
-    transition: {
-      type: "linear",
-      duration: 0.4,
-    },
-  },
-  {
-    title: "Calendax",
-    description: `Manage your appointments, events and much more using calendax.`,
-    link: "https://calendax.daxclients.com/",
-    img: "/assets/images/Calendax.PNG",
-    skills: [
-      {
-        title: "Html/CSS JavaScript",
-      },
-      {
-        title: "Laravel",
-      },
-      {
-        title: "React",
-      },
-      {
-        title: "jQuery",
-      },
-      {
-        title: "MySQL",
-      },
-    ],
-    transition: {
-      type: "linear",
-      duration: 0.8,
-    },
-  },
   {
     title: "My Res ERP",
     description: `ResERP software for real estate builders and developers is a 
@@ -123,58 +64,7 @@ const PROJECTS = [
       type: "linear",
       duration: 1.2,
     },
-  },
-  {
-    title: "Flex Market",
-    description: `Flex Market is an E-commerce platform where you can buy and sell stuff.`,
-    link: "https://flexemarket.com/",
-    img: "/assets/images/FLEX.PNG",
-    skills: [
-      {
-        title: "Html/CSS JavaScript",
-      },
-      {
-        title: "Laravel",
-      },
-      {
-        title: "Vue",
-      },
-      {
-        title: "Nuxt.js",
-      },
-      {
-        title: "MySQL",
-      },
-    ],
-    transition: {
-      type: "linear",
-      duration: 1.4,
-    },
-  },
-  {
-    title: "Bullseye",
-    description: `Bullseye survey conducts various surveys related to consumption of tobacco.`,
-    link: "https://bulleyes.afnato.com/",
-    img: "/assets/images/Bullseye.PNG",
-    skills: [
-      {
-        title: "Html/CSS JavaScript",
-      },
-      {
-        title: "Laravel",
-      },
-      {
-        title: "React",
-      },
-      {
-        title: "MySQL",
-      },
-    ],
-    transition: {
-      type: "linear",
-      duration: 1.5,
-    },
-  },
+  }
 ];
 
 /**
@@ -182,37 +72,16 @@ const PROJECTS = [
  */
 const WORK_EXPERIENCES = [
   {
-    company_name: "Digital Auxilius",
+    company_name: "Techibits",
     job_title: "Software Engineer",
-    description: `Responsible for creating and maintaining software products and projects using the LAMP stack (Linux, Apache, MySQL, and PHP)
-    Front-end technologies used include Next.js, React.js, and jQuery. Responsible for leading a team of 2-3 individuals. .`,
-    time_period: "Sep 2022",
+    description: ``,
+    time_period: "May 2022 - Until",
     is_current: true,
     is_description: false,
     points: [
       "Responsible for creating and maintaining software products and projects using the LAMP stack (Linux, Apache, MySQL, and PHP).",
-      "Working on front-end using Next.js, React.js, Tailwind, Ant Design and jQuery.",
-      "Leading two junior developers and assisting seniors in daily tasks.",
-      "Reviewing Pull Requests and troubleshooting if there are any bugs.",
-      "Writing clean, maintainable, and efficient code. Both on front-end and back-end.",
-      "Debugging, troubleshooting, and fixing technical issues in a timely manner.",
-    ],
-    has_link: false,
-    transition: {
-      type: "linear",
-      duration: 0.8,
-    },
-  },
-  {
-    company_name: "Techibits",
-    job_title: "Software Engineer",
-    description: ``,
-    time_period: "May 2021 - Sep 2022",
-    is_current: false,
-    is_description: false,
-    points: [
-      "Responsible for creating and maintaining software products and projects using the LAMP stack (Linux, Apache, MySQL, and PHP).",
-      "Front-end technologies used includes React.js and jQuery.",
+      "Front-end web technologies used includes React.js and jQuery.",
+      "Mobile application technologies used includes React native, Capacitor Framework 7.",
       "Writing clean, maintainable, and efficient code. Both on front-end and back-end.",
       "Debugging, troubleshooting, and fixing technical issues in a timely manner.",
       `Designing and implementing complex business logic in there product.`,
@@ -222,21 +91,7 @@ const WORK_EXPERIENCES = [
       type: "linear",
       duration: 1.0,
     },
-  },
-  {
-    company_name: "Boossto !",
-    job_title: "Web Developer",
-    description: ``,
-    time_period: "Nov 2020 - May 2021",
-    points: [""],
-    is_description: true,
-    has_link: false,
-    is_current: false,
-    transition: {
-      type: "linear",
-      duration: 1.2,
-    },
-  },
+  }
 ];
 
 const VISIBILITY = {

@@ -11,7 +11,7 @@ const HomeSection = dynamic(() => import("@components/Sections/Home"));
 const Home: NextPageWithLayout = () => {
   return (
     <>
-      <PageTitle title="Armash Portfolio" />
+      <PageTitle title="Mateenius Portfolio" />
       <HomeSection title={GREETING.title} description={GREETING.description} />
       <BottomButton title="About Me" goto="/about" />
     </>
