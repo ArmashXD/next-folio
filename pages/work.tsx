@@ -13,7 +13,7 @@ interface Props {
   repos: [];
 }
 
-const Work: NextPageWithLayout = ({ repos }: any) => {
+const Work: NextPageWithLayout = ({ repos }: Props) => {
   console.log("repos: ", repos);
   
   return (
