@@ -8,10 +8,14 @@ interface Props {
 
 function Repos({ repos }: Props) {
   const sortedRepos = useCallback(() => {
-    const withDescription = repos.filter(
+    if (!repos || repos.length === 0) {
+      return [];
+    }
+
+    const withDescription = repos?.filter(
       (item: any) => item?.description !== null
     );
-    const withOutDescription = repos.filter(
+    const withOutDescription = repos?.filter(
       (item: any) => item?.description === null
     );
 
@@ -25,6 +29,10 @@ function Repos({ repos }: Props) {
 
     return withDescription.concat(withOutDescription);
   }, [repos]);
+
+  if (!repos || repos.length === 0) {
+    return <p>No projects available.</p>;
+  }
 
   return (
     <div className="py-5">
