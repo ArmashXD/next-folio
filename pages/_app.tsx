@@ -4,6 +4,8 @@ import type { AppProps } from "next/app";
 import { NextPage } from "next";
 import { themeChange } from "theme-change";
 import "../styles/globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 export type NextPageWithLayout<P = any, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -29,6 +31,7 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
         <meta property="og:url" content="https" />
         <meta property="og:type" content="website" />
       </Head>
+      <SpeedInsights />
       <Component {...pageProps} />
     </>
   );
