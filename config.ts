@@ -9,7 +9,7 @@ const PROFILE_INFO = {
   nickname: "Armash XD",
   about: {
     title: "About Me ",
-    description: `I am a software engineer with over 2.5 years of experience in the industry. 
+    description: `I am a software engineer with over 3.5 years of experience in the industry. 
     My main areas of expertise are Laravel, React, Vue, and front-end web development with HTML, CSS, and JavaScript. 
     I have a strong foundation in computer science principles and enjoy using my skills to build intuitive and efficient web applications. 
     I am passionate about staying up to date with the latest technologies and constantly improving my skillset. In my current role, 
